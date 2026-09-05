@@ -6,17 +6,21 @@ A curated collection of hard-hitting interview questions for senior, staff, and 
 
 ### By interview level
 
-- [Principal Engineer interview prep](interviews/principal-engineer/README.md) — 130 questions with model-answer guidance, split into separate company and interview-round files.
+- [Principal Engineer interview prep](interviews/principal-engineer/README.md) — 130 questions with model-answer guidance, organized into canonical high-level concepts.
 
 ### By topic
 
-The principal-engineer collection is organized into separate company files. Open the guide for the full practice framework, or go directly to a company's focused question bank:
+The principal-engineer collection is organized by reusable engineering concepts rather than companies. Each question appears once in the concept where it is most useful; the original company loop is retained as source context inside the file:
 
 | Company | Topics |
 | --- | --- |
-| [Atlassian questions](interviews/principal-engineer/atlassian.md) | Coding and systems, system design, front-end practices, networking/OS, SQL and data |
-| [NVIDIA questions](interviews/principal-engineer/nvidia.md) | Core systems, GPU/parallelism, team-dependent design, hardware and digital logic |
-| [Booking.com questions](interviews/principal-engineer/booking-com.md) | Coding, reliability/distributed systems, fraud detection, leadership and behavioral |
+| [Coding and data structures](interviews/principal-engineer/concepts/coding-and-data-structures.md) | Algorithms, data structures, coding fundamentals, and performance |
+| [System design and architecture](interviews/principal-engineer/concepts/system-design-and-architecture.md) | Platforms, APIs, architecture decisions, SaaS, and fraud systems |
+| [Distributed systems and reliability](interviews/principal-engineer/concepts/distributed-systems-and-reliability.md) | Networking, consistency, failure modes, observability, and scale |
+| [Data and storage](interviews/principal-engineer/concepts/data-and-storage.md) | SQL, schemas, indexing, partitioning, migrations, and analytics |
+| [Front-end and platform engineering](interviews/principal-engineer/concepts/frontend-and-platform-engineering.md) | JavaScript, rendering, design systems, performance, and technical debt |
+| [GPU, parallelism, and hardware](interviews/principal-engineer/concepts/gpu-parallelism-and-hardware.md) | CUDA, GPU systems, memory, hardware/software boundaries, and digital logic |
+| [Technical leadership and behavioral](interviews/principal-engineer/concepts/technical-leadership-and-behavioral.md) | Influence, mentoring, judgment, communication, and principal-level scope |
 
 ## How to use this repository
 

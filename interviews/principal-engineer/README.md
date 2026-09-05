@@ -1,16 +1,20 @@
 # Principal Engineer Interview Prep
 
-This collection contains principal-level questions from Atlassian, NVIDIA, and Booking.com interview loops. The questions are split into one file per company and grouped by interview round, so you can focus on one hiring context without scrolling through an unrelated 450-line document. Each question is followed by **model answer guidance**: the important reasoning path, trade-offs, risks, and leadership signals an excellent answer should surface.
+This collection contains principal-level questions from Atlassian, NVIDIA, and Booking.com interview loops. The questions are organized into canonical high-level concepts, so related questions live together and future contributions have a clear home. Each question appears once; the original company loop is retained as source context inside the concept file. Each question is followed by **model answer guidance**: the important reasoning path, trade-offs, risks, and leadership signals an excellent answer should surface.
 
 ## Quick navigation
 
 | Interview loop | Focus areas |
 | --- | --- |
-| [Atlassian questions](atlassian.md) | Distributed systems, SaaS architecture, front-end platforms, networking/OS, and SQL |
-| [NVIDIA questions](nvidia.md) | Systems programming, CUDA/GPU architecture, orchestration, hardware/software boundaries, and digital logic |
-| [Booking.com questions](booking-com.md) | Algorithms, booking reliability, distributed systems, fraud detection, and technical leadership |
+| [Coding and data structures](concepts/coding-and-data-structures.md) | Algorithms, data structures, coding fundamentals, and performance |
+| [System design and architecture](concepts/system-design-and-architecture.md) | Platforms, APIs, architecture decisions, SaaS, and fraud systems |
+| [Distributed systems and reliability](concepts/distributed-systems-and-reliability.md) | Networking, consistency, failure modes, observability, and scale |
+| [Data and storage](concepts/data-and-storage.md) | SQL, schemas, indexing, partitioning, migrations, and analytics |
+| [Front-end and platform engineering](concepts/frontend-and-platform-engineering.md) | JavaScript, rendering, design systems, performance, and technical debt |
+| [GPU, parallelism, and hardware](concepts/gpu-parallelism-and-hardware.md) | CUDA, GPU systems, memory, hardware/software boundaries, and digital logic |
+| [Technical leadership and behavioral](concepts/technical-leadership-and-behavioral.md) | Influence, mentoring, judgment, communication, and principal-level scope |
 
-Use the company files above as the primary navigation. Each file's table of contents also links directly to its interview rounds.
+Use the concept files above as the primary navigation. Each file keeps source labels (Atlassian, NVIDIA, or Booking.com) so readers can still understand the context without duplicating questions across company files.
 
 ## How to practice
 
