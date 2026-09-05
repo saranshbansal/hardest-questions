@@ -14,15 +14,52 @@ The collection focuses on the reasoning, trade-offs, and leadership judgment exp
 
 The repository currently contains **130 questions**, each paired with model-answer guidance. Questions are organized by reusable engineering concepts rather than by company, so each question has one canonical home and future contributions have a clear place.
 
-| Concept | Coverage |
-| --- | --- |
-| ◈ [Coding and data structures](coding-and-data-structures.md) | Algorithms, data structures, coding fundamentals, and performance |
-| △ [System design and architecture](system-design-and-architecture.md) | Platforms, APIs, architecture decisions, SaaS, and fraud systems |
-| ≋ [Distributed systems and reliability](distributed-systems-and-reliability.md) | Networking, consistency, failure modes, observability, and scale |
-| ▦ [Data and storage](data-and-storage.md) | SQL, schemas, indexing, partitioning, migrations, and analytics |
-| ◌ [Front-end and platform engineering](frontend-and-platform-engineering.md) | JavaScript, rendering, design systems, performance, and technical debt |
-| ◉ [GPU, parallelism, and hardware](gpu-parallelism-and-hardware.md) | CUDA, GPU systems, memory, hardware/software boundaries, and digital logic |
-| ✦ [Technical leadership and behavioral](technical-leadership-and-behavioral.md) | Influence, mentoring, judgment, communication, and principal-level scope |
+<table>
+  <thead>
+    <tr>
+      <th align="center"> </th>
+      <th align="left">Concept</th>
+      <th align="left">Coverage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><span style="font-size: 1.6em;">◈</span></td>
+      <td><a href="coding-and-data-structures.md">Coding and data structures</a></td>
+      <td>Algorithms, data structures, coding fundamentals, and performance</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="font-size: 1.6em;">△</span></td>
+      <td><a href="system-design-and-architecture.md">System design and architecture</a></td>
+      <td>Platforms, APIs, architecture decisions, SaaS, and fraud systems</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="font-size: 1.6em;">≋</span></td>
+      <td><a href="distributed-systems-and-reliability.md">Distributed systems and reliability</a></td>
+      <td>Networking, consistency, failure modes, observability, and scale</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="font-size: 1.6em;">▦</span></td>
+      <td><a href="data-and-storage.md">Data and storage</a></td>
+      <td>SQL, schemas, indexing, partitioning, migrations, and analytics</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="font-size: 1.6em;">◌</span></td>
+      <td><a href="frontend-and-platform-engineering.md">Front-end and platform engineering</a></td>
+      <td>JavaScript, rendering, design systems, performance, and technical debt</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="font-size: 1.6em;">◉</span></td>
+      <td><a href="gpu-parallelism-and-hardware.md">GPU, parallelism, and hardware</a></td>
+      <td>CUDA, GPU systems, memory, hardware/software boundaries, and digital logic</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="font-size: 1.6em;">✦</span></td>
+      <td><a href="technical-leadership-and-behavioral.md">Technical leadership and behavioral</a></td>
+      <td>Influence, mentoring, judgment, communication, and principal-level scope</td>
+    </tr>
+  </tbody>
+</table>
 
 ## How to use it
 
