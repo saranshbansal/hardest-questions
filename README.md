@@ -12,7 +12,18 @@ The collection focuses on the reasoning, trade-offs, and leadership judgment exp
 
 ## What's inside
 
-The repository currently contains **130 questions**, each paired with model-answer guidance. Questions are organized by reusable engineering concepts rather than by company, so each question has one canonical home and future contributions have a clear place.
+The repository currently contains **160 questions** across two distinct role tracks:
+
+- **Engineering:** architecture, systems, data, front-end, hardware, and technical leadership.
+- **Technical Program Management (TPM):** technical credibility, programme delivery, stakeholder leadership, risk, and agile ways of working.
+
+Questions are organized by reusable concepts within each role track, so each question has one canonical home and future contributions have a clear place. Open a card in any file to reveal the answer guidance and evaluator notes.
+
+## Choose a role track
+
+### Engineering
+
+The engineering collection contains 130 questions for senior, staff, and principal engineers.
 
 Every concept file uses compact, collapsible Q&A cards. Open a card to reveal the answer guidance, trade-offs, and code examples; the `Q001`-style serial numbers make it easy to reference a specific prompt during study or discussion.
 
@@ -62,6 +73,16 @@ Every concept file uses compact, collapsible Q&A cards. Open a card to reveal th
     </tr>
   </tbody>
 </table>
+
+### Technical Program Management
+
+The TPM collection contains 30 questions adapted from the supplied interviewer-preparation set. These are intentionally separate from engineering questions: TPM answers should demonstrate technical credibility and delivery judgment without pretending the TPM owns implementation-level engineering decisions.
+
+| Concept | Coverage |
+| --- | --- |
+| [Technical credibility](tpm-technical-credibility.md) | APIs, releases, architecture awareness, data, security, and production readiness |
+| [Programme management](tpm-programme-management.md) | Recovery, ambiguity, prioritisation, stakeholders, ownership, and vendors |
+| [Agile and ways of working](tpm-agile-and-ways-of-working.md) | Programme setup, ceremonies, speed versus quality, estimation, scaling, and influence |
 
 ## How to use it
 
