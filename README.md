@@ -21,7 +21,7 @@ Questions are organized by reusable concepts within each role track, so each que
 
 ## Choose a role track
 
-### Engineering
+### Engineering Track
 
 The engineering collection contains 130 questions for senior, staff, and principal engineers.
 
@@ -38,51 +38,51 @@ Every concept file uses compact, collapsible Q&A cards. Open a card to reveal th
   <tbody>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">◈</span></td>
-      <td><a href="coding-and-data-structures.md">Coding and data structures</a></td>
+      <td><a href="engineering/coding-and-data-structures.md">Coding and data structures</a></td>
       <td>Algorithms, data structures, coding fundamentals, and performance</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">△</span></td>
-      <td><a href="system-design-and-architecture.md">System design and architecture</a></td>
+      <td><a href="engineering/system-design-and-architecture.md">System design and architecture</a></td>
       <td>Platforms, APIs, architecture decisions, SaaS, and fraud systems</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">≋</span></td>
-      <td><a href="distributed-systems-and-reliability.md">Distributed systems and reliability</a></td>
+      <td><a href="engineering/distributed-systems-and-reliability.md">Distributed systems and reliability</a></td>
       <td>Networking, consistency, failure modes, observability, and scale</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">▦</span></td>
-      <td><a href="data-and-storage.md">Data and storage</a></td>
+      <td><a href="engineering/data-and-storage.md">Data and storage</a></td>
       <td>SQL, schemas, indexing, partitioning, migrations, and analytics</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">◌</span></td>
-      <td><a href="frontend-and-platform-engineering.md">Front-end and platform engineering</a></td>
+      <td><a href="engineering/frontend-and-platform-engineering.md">Front-end and platform engineering</a></td>
       <td>JavaScript, rendering, design systems, performance, and technical debt</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">◉</span></td>
-      <td><a href="gpu-parallelism-and-hardware.md">GPU, parallelism, and hardware</a></td>
+      <td><a href="engineering/gpu-parallelism-and-hardware.md">GPU, parallelism, and hardware</a></td>
       <td>CUDA, GPU systems, memory, hardware/software boundaries, and digital logic</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">✦</span></td>
-      <td><a href="technical-leadership-and-behavioral.md">Technical leadership and behavioral</a></td>
+      <td><a href="engineering/technical-leadership-and-behavioral.md">Technical leadership and behavioral</a></td>
       <td>Influence, mentoring, judgment, communication, and principal-level scope</td>
     </tr>
   </tbody>
 </table>
 
-### Technical Program Management
+### Technical Program Management Track
 
 The TPM collection contains 30 questions adapted from the supplied interviewer-preparation set. These are intentionally separate from engineering questions: TPM answers should demonstrate technical credibility and delivery judgment without pretending the TPM owns implementation-level engineering decisions.
 
 | Concept | Coverage |
 | --- | --- |
-| [Technical credibility](tpm-technical-credibility.md) | APIs, releases, architecture awareness, data, security, and production readiness |
-| [Programme management](tpm-programme-management.md) | Recovery, ambiguity, prioritisation, stakeholders, ownership, and vendors |
-| [Agile and ways of working](tpm-agile-and-ways-of-working.md) | Programme setup, ceremonies, speed versus quality, estimation, scaling, and influence |
+| [Technical credibility](tpm/technical-credibility.md) | APIs, releases, architecture awareness, data, security, and production readiness |
+| [Programme management](tpm/programme-management.md) | Recovery, ambiguity, prioritisation, stakeholders, ownership, and vendors |
+| [Agile and ways of working](tpm/agile-and-ways-of-working.md) | Programme setup, ceremonies, speed versus quality, estimation, scaling, and influence |
 
 ## How to use it
 
