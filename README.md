@@ -15,7 +15,7 @@ The collection focuses on the reasoning, trade-offs, and leadership judgment exp
 The repository currently contains **160 questions** across two distinct role tracks:
 
 - **Engineering:** architecture, systems, data, front-end, hardware, and technical leadership.
-- **Technical Program Management (TPM):** technical credibility, programme delivery, stakeholder leadership, risk, and agile ways of working.
+- **Technical Program / Project Management:** technical credibility, programme delivery, stakeholder leadership, risk, and agile ways of working.
 
 Questions are organized by reusable concepts within each role track, so each question has one canonical home and future contributions have a clear place. Open a card in any file to reveal the answer guidance and evaluator notes.
 
@@ -74,15 +74,15 @@ Every concept file uses compact, collapsible Q&A cards. Open a card to reveal th
   </tbody>
 </table>
 
-### Technical Program Management Track
+### Technical Program / Project Management Track
 
-The TPM collection contains 30 questions adapted from the supplied interviewer-preparation set. These are intentionally separate from engineering questions: TPM answers should demonstrate technical credibility and delivery judgment without pretending the TPM owns implementation-level engineering decisions.
+The Technical Program / Project Management collection contains 30 questions adapted from the supplied interviewer-preparation set. These are intentionally separate from engineering questions: program and project manager answers should demonstrate technical credibility and delivery judgment without pretending to own implementation-level engineering decisions.
 
 | Concept | Coverage |
 | --- | --- |
-| [Technical credibility](tpm/technical-credibility.md) | APIs, releases, architecture awareness, data, security, and production readiness |
-| [Programme management](tpm/programme-management.md) | Recovery, ambiguity, prioritisation, stakeholders, ownership, and vendors |
-| [Agile and ways of working](tpm/agile-and-ways-of-working.md) | Programme setup, ceremonies, speed versus quality, estimation, scaling, and influence |
+| [Technical credibility](technical-program-manager/technical-credibility.md) | APIs, releases, architecture awareness, data, security, and production readiness |
+| [Programme management](technical-program-manager/programme-management.md) | Recovery, ambiguity, prioritisation, stakeholders, ownership, and vendors |
+| [Agile and ways of working](technical-program-manager/agile-and-ways-of-working.md) | Programme setup, ceremonies, speed versus quality, estimation, scaling, and influence |
 
 ## How to use it
 
