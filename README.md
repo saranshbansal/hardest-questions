@@ -16,13 +16,13 @@ The repository currently contains **130 questions**, each paired with model-answ
 
 | Concept | Coverage |
 | --- | --- |
-| [Coding and data structures](coding-and-data-structures.md) | Algorithms, data structures, coding fundamentals, and performance |
-| [System design and architecture](system-design-and-architecture.md) | Platforms, APIs, architecture decisions, SaaS, and fraud systems |
-| [Distributed systems and reliability](distributed-systems-and-reliability.md) | Networking, consistency, failure modes, observability, and scale |
-| [Data and storage](data-and-storage.md) | SQL, schemas, indexing, partitioning, migrations, and analytics |
-| [Front-end and platform engineering](frontend-and-platform-engineering.md) | JavaScript, rendering, design systems, performance, and technical debt |
-| [GPU, parallelism, and hardware](gpu-parallelism-and-hardware.md) | CUDA, GPU systems, memory, hardware/software boundaries, and digital logic |
-| [Technical leadership and behavioral](technical-leadership-and-behavioral.md) | Influence, mentoring, judgment, communication, and principal-level scope |
+| ◈ [Coding and data structures](coding-and-data-structures.md) | Algorithms, data structures, coding fundamentals, and performance |
+| △ [System design and architecture](system-design-and-architecture.md) | Platforms, APIs, architecture decisions, SaaS, and fraud systems |
+| ≋ [Distributed systems and reliability](distributed-systems-and-reliability.md) | Networking, consistency, failure modes, observability, and scale |
+| ▦ [Data and storage](data-and-storage.md) | SQL, schemas, indexing, partitioning, migrations, and analytics |
+| ◌ [Front-end and platform engineering](frontend-and-platform-engineering.md) | JavaScript, rendering, design systems, performance, and technical debt |
+| ◉ [GPU, parallelism, and hardware](gpu-parallelism-and-hardware.md) | CUDA, GPU systems, memory, hardware/software boundaries, and digital logic |
+| ✦ [Technical leadership and behavioral](technical-leadership-and-behavioral.md) | Influence, mentoring, judgment, communication, and principal-level scope |
 
 ## How to use it
 
