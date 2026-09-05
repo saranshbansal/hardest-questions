@@ -1,16 +1,16 @@
 # Principal Engineer Interview Prep
 
-This collection contains principal-level questions from Atlassian, NVIDIA, and Booking.com interview loops. Each question is followed by **model answer guidance**: the important reasoning path, trade-offs, risks, and leadership signals an excellent answer should surface.
+This collection contains principal-level questions from Atlassian, NVIDIA, and Booking.com interview loops. The questions are split into one file per company and grouped by interview round, so you can focus on one hiring context without scrolling through an unrelated 450-line document. Each question is followed by **model answer guidance**: the important reasoning path, trade-offs, risks, and leadership signals an excellent answer should surface.
 
 ## Quick navigation
 
 | Interview loop | Focus areas |
 | --- | --- |
-| [Atlassian](questions.md#atlassian) | Distributed systems, SaaS architecture, front-end platforms, networking/OS, and SQL |
-| [NVIDIA](questions.md#nvidia) | Systems programming, CUDA/GPU architecture, orchestration, hardware/software boundaries, and digital logic |
-| [Booking.com](questions.md#bookingcom) | Algorithms, booking reliability, distributed systems, fraud detection, and technical leadership |
+| [Atlassian questions](atlassian.md) | Distributed systems, SaaS architecture, front-end platforms, networking/OS, and SQL |
+| [NVIDIA questions](nvidia.md) | Systems programming, CUDA/GPU architecture, orchestration, hardware/software boundaries, and digital logic |
+| [Booking.com questions](booking-com.md) | Algorithms, booking reliability, distributed systems, fraud detection, and technical leadership |
 
-For a complete, searchable question bank, open [all questions and model answers](questions.md).
+Use the company files above as the primary navigation. Each file's table of contents also links directly to its interview rounds.
 
 ## How to practice
 

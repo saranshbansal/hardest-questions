@@ -6,17 +6,17 @@ A curated collection of hard-hitting interview questions for senior, staff, and 
 
 ### By interview level
 
-- [Principal Engineer interview prep](interviews/principal-engineer/README.md) — 130 questions with model-answer guidance from Atlassian, NVIDIA, and Booking.com loops.
+- [Principal Engineer interview prep](interviews/principal-engineer/README.md) — 130 questions with model-answer guidance, split into separate company and interview-round files.
 
 ### By topic
 
-The principal-engineer collection is organized into company-specific interview loops, with each loop split into focused rounds:
+The principal-engineer collection is organized into separate company files. Open the guide for the full practice framework, or go directly to a company's focused question bank:
 
 | Company | Topics |
 | --- | --- |
-| [Atlassian](interviews/principal-engineer/questions.md#atlassian) | [Coding and systems](interviews/principal-engineer/questions.md#1-coding--system-fundamentals-streaming-rbac-hierarchical-data-api-crawler-design), [system design](interviews/principal-engineer/questions.md#2-system-design-real-time-collaboration-issue-tracking-notification-pipelines-plugin-architecture), [front end](interviews/principal-engineer/questions.md#3-front-end--modern-javascript-practices), [networking and OS](interviews/principal-engineer/questions.md#4-networking--os-fundamentals-rapid-fire-style-elevated), [SQL and data](interviews/principal-engineer/questions.md#5-sql--data-manipulation) |
-| [NVIDIA](interviews/principal-engineer/questions.md#nvidia) | [Core systems](interviews/principal-engineer/questions.md#1-core-coding--systems-problems), [GPU and parallelism](interviews/principal-engineer/questions.md#2-gpu-parallelism--memory-depth), [team-dependent loop](interviews/principal-engineer/questions.md#3-team-dependent-loop-coding-system-design-domain-knowledge), [hardware and digital logic](interviews/principal-engineer/questions.md#4-hardware-adjacent--digital-logic) |
-| [Booking.com](interviews/principal-engineer/questions.md#bookingcom) | [Coding](interviews/principal-engineer/questions.md#1-core-coding-problems-itinerary-reconstruction-caching), [reliability and distributed systems](interviews/principal-engineer/questions.md#2-reliability--distributed-systems-idempotency-retries-ipc-observability-scalability), [fraud detection](interviews/principal-engineer/questions.md#3-system-design-fraud-detection), [leadership and behavioral](interviews/principal-engineer/questions.md#4-culture-fit--technical-leadership--behavioral) |
+| [Atlassian questions](interviews/principal-engineer/atlassian.md) | Coding and systems, system design, front-end practices, networking/OS, SQL and data |
+| [NVIDIA questions](interviews/principal-engineer/nvidia.md) | Core systems, GPU/parallelism, team-dependent design, hardware and digital logic |
+| [Booking.com questions](interviews/principal-engineer/booking-com.md) | Coding, reliability/distributed systems, fraud detection, leadership and behavioral |
 
 ## How to use this repository
 
