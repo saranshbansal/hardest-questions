@@ -1,6 +1,14 @@
-# Hardest Questions
+<p align="center">
+  <img src="banner.jpeg" alt="A glowing idea among hanging light bulbs" width="720">
+</p>
 
-A curated question bank for senior, staff, and principal engineers. The collection focuses on the reasoning, trade-offs, and leadership judgment expected in difficult technical interviews.
+<h1 align="center">Hardest Questions</h1>
+
+<p align="center">
+  A curated question bank for senior, staff, and principal engineers.
+</p>
+
+The collection focuses on the reasoning, trade-offs, and leadership judgment expected in difficult technical interviews.
 
 ## What's inside
 
