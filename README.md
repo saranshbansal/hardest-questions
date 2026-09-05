@@ -14,6 +14,8 @@ The collection focuses on the reasoning, trade-offs, and leadership judgment exp
 
 The repository currently contains **130 questions**, each paired with model-answer guidance. Questions are organized by reusable engineering concepts rather than by company, so each question has one canonical home and future contributions have a clear place.
 
+Every concept file uses compact, collapsible Q&A cards. Open a card to reveal the answer guidance, trade-offs, and code examples; the `Q001`-style serial numbers make it easy to reference a specific prompt during study or discussion.
+
 <table>
   <thead>
     <tr>
