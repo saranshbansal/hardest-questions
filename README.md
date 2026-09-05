@@ -1,18 +1,12 @@
 # Hardest Questions
 
-A curated collection of hard-hitting interview questions for senior, staff, and principal engineers.
+A curated question bank for senior, staff, and principal engineers. The collection focuses on the reasoning, trade-offs, and leadership judgment expected in difficult technical interviews.
 
-## Browse the collection
+## What's inside
 
-### By interview level
+The repository currently contains **130 questions**, each paired with model-answer guidance. Questions are organized by reusable engineering concepts rather than by company, so each question has one canonical home and future contributions have a clear place.
 
-- [Principal Engineer interview prep](README.md#browse-the-collection) — 130 questions with model-answer guidance, organized into canonical high-level concepts.
-
-### By topic
-
-The principal-engineer collection is organized by reusable engineering concepts rather than companies. Each question appears once in the concept where it is most useful; the original company loop is retained as source context inside the file:
-
-| Company | Topics |
+| Concept | Coverage |
 | --- | --- |
 | [Coding and data structures](coding-and-data-structures.md) | Algorithms, data structures, coding fundamentals, and performance |
 | [System design and architecture](system-design-and-architecture.md) | Platforms, APIs, architecture decisions, SaaS, and fraud systems |
@@ -22,6 +16,12 @@ The principal-engineer collection is organized by reusable engineering concepts 
 | [GPU, parallelism, and hardware](gpu-parallelism-and-hardware.md) | CUDA, GPU systems, memory, hardware/software boundaries, and digital logic |
 | [Technical leadership and behavioral](technical-leadership-and-behavioral.md) | Influence, mentoring, judgment, communication, and principal-level scope |
 
-## How to use this repository
+## How to use it
 
-Use the concept files above as the guide: each contains related questions and model answers, with the original interview source retained as context.
+1. Choose a concept and answer a question aloud before reading the model guidance.
+2. Explain the requirements and constraints before proposing a solution.
+3. Make trade-offs explicit: consistency versus availability, latency versus cost, or speed versus maintainability.
+4. Cover failure modes, observability, rollout, and rollback for design questions.
+5. Replace the model guidance with your own experience, metrics, and examples.
+
+The original interview source—Atlassian, NVIDIA, or Booking.com—is retained inside each concept file as context. The guidance is a scaffold for reasoning, not a script to memorize.
