@@ -1,6 +1,6 @@
 # Full System Design Question Bank
 
-Thirty-eight additional system-design prompts covering reusable foundations and canonical product patterns. Each card is deliberately scoped so it does not repeat the existing architecture, distributed-systems, or data-and-storage collections.
+System-design prompts covering reusable foundations, traffic-management patterns, and canonical product designs. Each card is deliberately scoped so it does not repeat the existing architecture, distributed-systems, or data-and-storage collections.
 
 ## Requirements and architecture
 
@@ -272,4 +272,60 @@ Thirty-eight additional system-design prompts covering reusable foundations and 
 <summary><strong>SD-F043 · Why do most system design interviews fail?</strong></summary>
 
 **Answer guidance**: Candidates often optimize for naming technologies rather than demonstrating structured reasoning. They fail to clarify the problem, make assumptions explicit, quantify scale, explain trade-offs, or cover failure modes and operations. The remedy is a repeatable flow: clarify requirements, estimate workload, sketch a baseline, identify bottlenecks, compare alternatives, and close with observability, rollout, and follow-up questions. Interviewers are evaluating judgment and communication as much as the final diagram.
+</details>
+
+## Load balancing and traffic management
+
+<details>
+<summary><strong>SD-F044 · What is the difference between Layer 4 and Layer 7 load balancing?</strong></summary>
+
+**Answer guidance**: Layer 4 balances flows using transport metadata such as source/destination IP, port, and protocol. It can proxy or use direct server return with low overhead, preserves payload opacity, and scales well for arbitrary TCP or UDP traffic, but it cannot route by HTTP host, path, headers, or application identity. Layer 7 terminates the application protocol, parses requests, and can apply content-aware routing, authentication, retries, WAF policy, compression, and observability, at the cost of CPU, connection-management complexity, and protocol-specific failure modes. A strong design can use both: an L4 regional edge for connection distribution and L7 gateways for HTTP policy, with explicit timeout, retry, WebSocket, streaming, and client-IP semantics.
+</details>
+
+<details>
+<summary><strong>SD-F045 · How does consistent hashing work, and when is it preferable to ordinary hashing?</strong></summary>
+
+**Answer guidance**: Place both nodes and keys on a logical hash ring; a key is owned by the first node encountered clockwise. Adding or removing a node remaps only the adjacent key range instead of almost every key as `hash(key) mod N` would. Use virtual nodes or weighted tokens to reduce skew, and ensure membership changes are versioned and propagated consistently. It is useful for cache shards, connection affinity, and partition ownership, but it is not a substitute for replication, rebalancing controls, or a consensus-backed membership source. Explain how hot keys, node weights, replica reads, and migration load are handled.
+</details>
+
+<details>
+<summary><strong>SD-F046 · How do sticky sessions work, and what are their trade-offs?</strong></summary>
+
+**Answer guidance**: A routing layer maps a client or session key to one backend using a cookie, signed token, source-IP affinity, or consistent hashing. The mapping should have bounded lifetime and a safe fallback when the target is drained or unavailable. Stickiness can simplify in-memory session state and improve cache locality, but it creates skew, weakens failover, and makes autoscaling and multi-region routing harder. Prefer external durable session state or stateless tokens when practical; if affinity is required, replicate state, cap per-target load, support connection draining, and monitor remaps and hot clients.
+</details>
+
+<details>
+<summary><strong>SD-F047 · How do health checks work in a production load-balancing system?</strong></summary>
+
+**Answer guidance**: Separate readiness from liveness: a target should receive traffic only when it can serve the relevant workload, not merely when its process exists. Use a cheap transport check plus an application-level check that validates critical local dependencies without recursively calling the entire dependency graph. Require consecutive successes and failures, use hysteresis and independent checker quorum to avoid flapping, and apply timeouts, jitter, and per-zone views. On failure, stop new traffic, drain existing connections where safe, and distinguish overload from permanent failure. Health state needs observability, stale-state protection, and a fail-safe behavior if the health-control plane is unavailable.
+</details>
+
+<details>
+<summary><strong>SD-F048 · How does SSL/TLS termination work at a load balancer?</strong></summary>
+
+**Answer guidance**: The edge accepts the client TLS handshake, selects a certificate using SNI, negotiates a supported protocol and cipher, validates policy, and forwards the decrypted request to a backend. The design must protect private keys with a managed HSM or equivalent, automate certificate rotation, preserve authenticated client identity only through trusted headers or re-encryption, and prevent header spoofing. Choose re-encryption or end-to-end mTLS when the internal network is not trusted or regulatory controls require it; otherwise, plaintext backend hops reduce overhead but expand the blast radius. Track handshake latency, protocol failures, certificate expiry, and CPU pressure separately from application traffic.
+</details>
+
+<details>
+<summary><strong>SD-F049 · How do you prevent a thundering-herd problem?</strong></summary>
+
+**Answer guidance**: First identify the shared trigger: synchronized cache expiry, a recovering dependency, a scheduled job, or a retry storm. Use request coalescing or single-flight so one request refreshes a key, add TTL jitter and stale-while-revalidate, pre-warm predictable hot data, and cap concurrency with admission control. Retries need exponential backoff with jitter, a per-request and fleet-wide retry budget, and circuit breaking; recovery should ramp traffic gradually rather than release a full backlog at once. Measure refresh concurrency, queue age, origin load, retry amplification, and cold-key latency so the mitigation is proven rather than assumed.
+</details>
+
+<details>
+<summary><strong>SD-F050 · How would you scale the load balancer itself?</strong></summary>
+
+**Answer guidance**: Split a strongly versioned control plane from a horizontally scalable regional data plane. Scale data-plane workers by connection count, new-connection rate, packets per second, TLS handshakes, bytes per second, and memory—not CPU alone—and use sharded listeners, connection reuse, kernel-bypass/eBPF or specialized datapaths where justified. Distribute clients across independent nodes with anycast, DNS, or an upstream tier, and use consistent hashing only when connection or cache locality matters. Replicate configuration snapshots, atomically activate versions, drain before removal, isolate zones, reserve headroom for failover, and load-test SYN floods, long-lived connections, certificate rotation, and control-plane loss.
+</details>
+
+<details>
+<summary><strong>SD-F051 · How does AWS Application Load Balancer differ from Network Load Balancer?</strong></summary>
+
+**Answer guidance**: An ALB is an HTTP-aware Layer 7 reverse proxy: it supports host/path/header routing, HTTP features, WebSockets, redirects, authentication integrations, and target-group rules. An NLB is optimized for Layer 4 TCP/TLS/UDP flow handling, static addresses and high connection rates, with lower per-flow overhead and less application-level interpretation. Choose ALB when request-aware routing and HTTP policy matter; choose NLB for arbitrary transport protocols, extreme connection scale, source-IP preservation needs, or TLS pass-through/termination requirements. Discuss the exact semantics that matter—idle timeouts, health checks, TLS ownership, client IP, cross-zone balancing, observability, cost, and whether a service needs both tiers.
+</details>
+
+<details>
+<summary><strong>SD-F052 · How does Envoy differ from Nginx?</strong></summary>
+
+**Answer guidance**: Nginx is a mature event-driven web server and reverse proxy with strong static-content, HTTP termination, caching, and conventional ingress capabilities. Envoy is a service-proxy/data-plane platform designed for dynamic service discovery, rich L4/L7 filters, gRPC, observability, retries, circuit breaking, outlier detection, and xDS-driven control-plane configuration. The choice is workload- and operating-model-dependent: Nginx can be simpler and efficient for stable edge/web traffic, while Envoy is often stronger for a polyglot service mesh or rapidly changing fleet. Compare configuration ownership, hot reload and convergence behavior, resource overhead, extension model, operational maturity, failure semantics, and whether the organization actually needs Envoy's control-plane complexity.
 </details>

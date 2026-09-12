@@ -12,22 +12,22 @@ The collection focuses on the reasoning, trade-offs, and leadership judgment exp
 
 ## What's inside
 
-The repository currently contains **203 questions** across two distinct role tracks:
+The repository currently contains **212 questions** across two distinct role tracks:
 
-- **Engineering:** architecture, systems, data, front-end, hardware, and technical leadership.
+- **Engineering:** architecture, systems, data, front-end, hardware, technical leadership, and load-balancing fundamentals.
 - **Technical Program / Project Management:** technical credibility, programme delivery, stakeholder leadership, risk, and agile ways of working.
 
-Alongside those question cards, the Engineering Track now includes **16 in-depth solution guides**. These are detailed architecture chapters rather than additional interview questions, so the **203 interview-question total remains unchanged**.
+Alongside those question cards, the Engineering Track now includes **16 in-depth solution guides**. These are detailed architecture chapters rather than additional interview questions, so the **212 interview-question total remains separate**.
 
 Questions are organized by reusable concepts within each role track, so each question has one canonical home and future contributions have a clear place. Open a card in any file to reveal the answer guidance and evaluator notes.
 
-The system-design set is screened against the existing system-design, distributed-systems, and data-and-storage cards. Overlapping prompts are folded into canonical cards: cache hit ratio into `SD-F015`, data-centre failure into `SD-F026`, and live schema changes into `SD-F032`. The five new prompts are `SD-F039`–`SD-F043`; no duplicate cards were added.
+The system-design set is screened against the existing system-design, distributed-systems, and data-and-storage cards. Overlapping prompts are folded into canonical cards: cache hit ratio into `SD-F015`, data-centre failure into `SD-F026`, live schema changes into `SD-F032`, and traffic-management fundamentals into `SD-F044`–`SD-F052`. No duplicate cards were added.
 
 ## Choose a role track
 
 ### Engineering Track
 
-The engineering collection contains 173 questions for senior, staff, and principal engineers.
+The engineering collection contains 182 questions for senior, staff, and principal engineers.
 
 Every concept file uses compact, collapsible Q&A cards. Open a card to reveal the answer guidance, trade-offs, and code examples; the `Q001`-style serial numbers make it easy to reference a specific prompt during study or discussion.
 
@@ -56,7 +56,7 @@ Every concept file uses compact, collapsible Q&A cards. Open a card to reveal th
     <tr>
       <td align="center"><span style="font-size: 1.6em;">◇</span></td>
       <td><a href="engineering/system-design-fundamentals.md">System design fundamentals</a></td>
-      <td align="center">43</td>
+      <td align="center">52</td>
       <td>Requirements, platform patterns, data flows, resilience, security, and product-scale designs</td>
     </tr>
     <tr>
