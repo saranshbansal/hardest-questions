@@ -91,9 +91,9 @@ Thirty-eight additional system-design prompts covering reusable foundations and 
 </details>
 
 <details>
-<summary><strong>SD-F015 · How would you design a safe distributed cache?</strong></summary>
+<summary><strong>SD-F015 · How would you design a safe distributed cache, and how do you improve cache hit ratio under load?</strong></summary>
 
-**Answer guidance**: Define whether the cache is an optimization or a source of truth, then choose cache-aside, read-through, or write-through semantics accordingly. Prevent stampedes with request coalescing and jittered expiry, address hot keys with replication, and use bounded values and eviction policies. Plan invalidation, stale reads, serialization compatibility, and behavior when the cache is unavailable.
+**Answer guidance**: Define whether the cache is an optimization or a source of truth, then choose cache-aside, read-through, or write-through semantics accordingly. Improve hit ratio by caching at the right granularity, normalizing keys, sizing TTLs to data volatility, warming predictable hot data, and avoiding accidental invalidation. Prevent stampedes with request coalescing and jittered expiry, address hot keys with replication, and use bounded values and eviction policies. Track hit ratio by endpoint and key class; a global average can hide a badly performing workload. Plan invalidation, stale reads, serialization compatibility, and behavior when the cache is unavailable.
 </details>
 
 <details>
@@ -161,9 +161,9 @@ Thirty-eight additional system-design prompts covering reusable foundations and 
 </details>
 
 <details>
-<summary><strong>SD-F026 · Design a disaster-recovery strategy for a stateful service.</strong></summary>
+<summary><strong>SD-F026 · Design a disaster-recovery strategy for a stateful service, including a complete data-centre failure.</strong></summary>
 
-**Answer guidance**: Set RTO and RPO from business impact, then select backups, point-in-time recovery, replicas, or a warm/hot secondary accordingly. Protect backups from the same failure domain, encrypt and regularly restore-test them, and document DNS, credentials, dependencies, and data-integrity checks. A failover runbook and game days matter more than a nominal replication diagram.
+**Answer guidance**: Set RTO and RPO from business impact, then select backups, point-in-time recovery, replicas, or a warm/hot secondary accordingly. For a full data-centre failure, replicate state across independent failure domains, keep traffic failover and capacity pre-planned, and define how writes are fenced to avoid split-brain. Protect backups from the same failure domain, encrypt and regularly restore-test them, and document DNS, credentials, dependencies, and data-integrity checks. A failover runbook and game days matter more than a nominal replication diagram.
 </details>
 
 <details>
@@ -197,9 +197,9 @@ Thirty-eight additional system-design prompts covering reusable foundations and 
 </details>
 
 <details>
-<summary><strong>SD-F032 · Design a safe zero-downtime deployment strategy for a stateful system.</strong></summary>
+<summary><strong>SD-F032 · Design a safe zero-downtime deployment strategy for a stateful system, including live schema changes.</strong></summary>
 
-**Answer guidance**: Separate backward-compatible schema changes from code rollout: expand, deploy readers/writers, backfill, then contract after verification. Use canaries or blue-green traffic shifting with health and business metrics, and keep rollback possible at each step. Coordinate long-running jobs, caches, message schemas, and connection draining; a database migration is part of the release, not an afterthought.
+**Answer guidance**: Handle live schema changes with an expand-migrate-contract sequence: add nullable structures first, deploy code that can read both shapes, backfill in throttled batches, switch writes and reads, verify, and only then remove the old shape. Separate this backward-compatible migration from code rollout. Use canaries or blue-green traffic shifting with health and business metrics, and keep rollback possible at each step. Coordinate long-running jobs, caches, message schemas, and connection draining; a database migration is part of the release, not an afterthought.
 </details>
 
 ## Product-scale designs
@@ -238,4 +238,38 @@ Thirty-eight additional system-design prompts covering reusable foundations and 
 <summary><strong>SD-F038 · Design a multi-region active-active service and explain when not to use it.</strong></summary>
 
 **Answer guidance**: Start with a conflict model: partition data by home region, use commutative operations or deterministic conflict resolution, and route reads and writes with clear failover semantics. Replicate asynchronously with bounded lag and reconcile after partitions. Active-active is justified only when its latency and availability benefits exceed conflict, cost, operational, and compliance complexity; otherwise use a simpler single-writer or warm-secondary design.
+</details>
+
+## Performance, capacity, and cost
+
+<details>
+<summary><strong>SD-F039 · How would you scale a system to handle a sudden traffic spike?</strong></summary>
+
+**Answer guidance**: First determine whether the spike is predictable, valid, or abusive, then protect the system with admission control, rate limits, queues, load shedding, and graceful degradation. Add capacity through horizontal autoscaling where it helps, but pre-warm critical resources because scaling signals and instance startup lag behind a sudden burst. Cache stable reads, prioritize essential requests, protect dependencies with bounded concurrency, and watch queue age, saturation, error rate, and user-facing latency. Afterward, use the traffic shape to improve forecasts and capacity tests.
+</details>
+
+<details>
+<summary><strong>SD-F040 · How do you reduce latency without adding more servers?</strong></summary>
+
+**Answer guidance**: Profile the complete request path before changing architecture: queueing, serialization, network hops, database plans, locks, garbage collection, and downstream calls. Remove unnecessary work, cache or precompute expensive results, batch round trips, colocate data, tune indexes and connection pools, and use asynchronous work for non-critical side effects. Set a latency budget by percentile and validate every optimization against p95/p99 and correctness; reducing average latency while worsening the tail is not a successful fix.
+</details>
+
+<details>
+<summary><strong>SD-F041 · How do you optimise a system for cost without losing performance?</strong></summary>
+
+**Answer guidance**: Start with a workload-level cost model covering compute, storage, network, managed-service premiums, and operational labour. Optimize the largest drivers first: right-size continuously, use autoscaling and commitment discounts for stable demand, move cold data to cheaper tiers, reduce cross-region transfer, and cache or batch work where it lowers total resource use. Keep performance SLOs and error budgets as guardrails, test changes with production-shaped load, and make unit cost visible by tenant or request type so savings do not hide a degraded user experience.
+</details>
+
+## System design judgment and interview craft
+
+<details>
+<summary><strong>SD-F042 · What is the most common system design mistake engineers make?</strong></summary>
+
+**Answer guidance**: The common mistake is jumping to components before clarifying requirements and trade-offs. A strong design starts with users, workload, consistency, failure tolerance, cost, and success metrics; it then chooses the simplest architecture that satisfies those constraints. Other recurring failures—ignoring operational ownership, treating every request as a microservice, skipping capacity math, and leaving no migration or rollback path—usually follow from that first omission.
+</details>
+
+<details>
+<summary><strong>SD-F043 · Why do most system design interviews fail?</strong></summary>
+
+**Answer guidance**: Candidates often optimize for naming technologies rather than demonstrating structured reasoning. They fail to clarify the problem, make assumptions explicit, quantify scale, explain trade-offs, or cover failure modes and operations. The remedy is a repeatable flow: clarify requirements, estimate workload, sketch a baseline, identify bottlenecks, compare alternatives, and close with observability, rollout, and follow-up questions. Interviewers are evaluating judgment and communication as much as the final diagram.
 </details>
