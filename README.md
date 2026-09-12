@@ -12,18 +12,20 @@ The collection focuses on the reasoning, trade-offs, and leadership judgment exp
 
 ## What's inside
 
-The repository currently contains **160 questions** across two distinct role tracks:
+The repository currently contains **198 questions** across two distinct role tracks:
 
 - **Engineering:** architecture, systems, data, front-end, hardware, and technical leadership.
 - **Technical Program / Project Management:** technical credibility, programme delivery, stakeholder leadership, risk, and agile ways of working.
 
 Questions are organized by reusable concepts within each role track, so each question has one canonical home and future contributions have a clear place. Open a card in any file to reveal the answer guidance and evaluator notes.
 
+The fundamentals set was screened against the existing system-design, distributed-systems, and data-and-storage cards. Overlapping themes (collaboration, search indexing, retries, idempotency, multi-region failover, consistency, observability, migrations, and partitioning) remain represented by their existing canonical cards; the 38 `SD-F001`–`SD-F038` prompts add distinct angles rather than copies.
+
 ## Choose a role track
 
 ### Engineering Track
 
-The engineering collection contains 130 questions for senior, staff, and principal engineers.
+The engineering collection contains 168 questions for senior, staff, and principal engineers.
 
 Every concept file uses compact, collapsible Q&A cards. Open a card to reveal the answer guidance, trade-offs, and code examples; the `Q001`-style serial numbers make it easy to reference a specific prompt during study or discussion.
 
@@ -45,6 +47,11 @@ Every concept file uses compact, collapsible Q&A cards. Open a card to reveal th
       <td align="center"><span style="font-size: 1.6em;">△</span></td>
       <td><a href="engineering/system-design-and-architecture.md">System design and architecture</a></td>
       <td>Platforms, APIs, architecture decisions, SaaS, and fraud systems</td>
+    </tr>
+    <tr>
+      <td align="center"><span style="font-size: 1.6em;">◇</span></td>
+      <td><a href="engineering/system-design-fundamentals.md">System design fundamentals</a></td>
+      <td>Requirements, platform patterns, data flows, resilience, security, and product-scale designs</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">≋</span></td>
