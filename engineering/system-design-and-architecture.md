@@ -1,10 +1,12 @@
-# System Design & Architecture
+# Applied System Design Case Studies
 
-Questions about designing platforms, services, APIs, and cross-team architectural direction.
+Applied, domain-specific system-design scenarios. Use this file after the fundamentals bank: each question combines reusable distributed-systems patterns with a particular product, platform, or operating constraint.
 
-## Atlassian
+The categories are intentionally organized by the problem domain rather than by interview source. The original source context is retained in the answer guidance where it adds useful context.
 
-### 2. System Design (real-time collaboration, issue tracking, notification pipelines, plugin architecture)
+## Product and SaaS platform architecture
+
+Real-time collaboration, multi-tenant SaaS, extensibility, search, notifications, auditability, and architecture leadership.
 
 <details>
 <summary><strong>Q001 · Design a real-time collaborative document editing system (like Confluence) — how do you handle conflict resolution and offline sync?</strong></summary>
@@ -87,9 +89,9 @@ Questions about designing platforms, services, APIs, and cross-team architectura
 
 </details>
 
-## NVIDIA
+## Infrastructure, hardware, and ML platforms
 
-### 3. Team-Dependent Loop: Coding, System Design, Domain Knowledge
+GPU-aware interfaces, model serving, elastic accelerator infrastructure, autonomous systems, and performance-focused technical leadership.
 
 <details>
 <summary><strong>Q011 · Design a high-throughput driver-level interface between application code and GPU hardware — what are the key abstraction boundaries?</strong></summary>
@@ -172,9 +174,9 @@ Questions about designing platforms, services, APIs, and cross-team architectura
 
 </details>
 
-## Booking.com
+## Fraud, risk, and decision systems
 
-### 3. System Design: Fraud Detection
+Real-time fraud scoring, feature consistency, rules, explainability, adversarial adaptation, privacy, build-versus-buy, and cross-functional governance.
 
 <details>
 <summary><strong>Q021 · Design a real-time credit card fraud detection system — what are the key components and how do you balance latency vs. accuracy?</strong></summary>

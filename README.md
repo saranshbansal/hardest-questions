@@ -23,6 +23,8 @@ Questions are organized by reusable concepts within each role track, so each que
 
 The system-design set is screened against the existing system-design, distributed-systems, and data-and-storage cards. Overlapping prompts are folded into canonical cards: cache hit ratio into `SD-F015`, data-centre failure into `SD-F026`, live schema changes into `SD-F032`, and traffic-management fundamentals into `SD-F044`–`SD-F052`. No duplicate cards were added.
 
+The two system-design question banks are deliberately separate: [System design fundamentals](engineering/system-design-fundamentals.md) covers reusable patterns, platform primitives, resilience, operations, and interview reasoning; [Applied system design case studies](engineering/system-design-and-architecture.md) applies those ideas to SaaS platforms, infrastructure/ML systems, and fraud/risk domains. They are not merged because the first is pattern-oriented and the second is domain-oriented.
+
 ## Choose a role track
 
 ### Engineering Track
@@ -49,15 +51,15 @@ Every concept file uses compact, collapsible Q&A cards. Open a card to reveal th
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">△</span></td>
-      <td><a href="engineering/system-design-and-architecture.md">System design and architecture</a></td>
+      <td><a href="engineering/system-design-and-architecture.md">Applied system design case studies</a></td>
       <td align="center">30</td>
-      <td>Platforms, APIs, architecture decisions, SaaS, and fraud systems</td>
+      <td>Product/SaaS platforms, infrastructure and ML systems, fraud/risk, and applied architecture decisions</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">◇</span></td>
       <td><a href="engineering/system-design-fundamentals.md">System design fundamentals</a></td>
       <td align="center">52</td>
-      <td>Requirements, platform patterns, data flows, resilience, security, and product-scale designs</td>
+      <td>Requirements, reusable platform patterns, data flows, resilience, security, traffic management, and interview judgment</td>
     </tr>
     <tr>
       <td align="center"><span style="font-size: 1.6em;">≋</span></td>
