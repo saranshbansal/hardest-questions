@@ -8,141 +8,77 @@
   A curated question bank for senior, staff, and principal engineers.
 </p>
 
-The collection focuses on the reasoning, trade-offs, and leadership judgment expected in difficult technical interviews.
+A collection of **212 interview questions** focused on reasoning, trade-offs, and leadership judgment expected in difficult technical interviews. Questions are organized by reusable concepts within each role track, so each question has one canonical home.
 
-## What's inside
+---
 
-The repository currently contains **212 questions** across two distinct role tracks:
+## Quick start
 
-- **Engineering:** architecture, systems, data, front-end, hardware, technical leadership, and load-balancing fundamentals.
-- **Technical Program / Project Management:** technical credibility, programme delivery, stakeholder leadership, risk, and agile ways of working.
+Choose your track and jump in:
 
-Alongside those question cards, the Engineering Track now includes **16 in-depth solution guides**. These are detailed architecture chapters rather than additional interview questions, so the **212 interview-question total remains separate**.
+- **[Engineering Track](#engineering-track)** — 182 questions across 8 concept areas + 16 in-depth solution guides
+- **[Technical Program / Project Management Track](#technical--project-management-track)** — 30 questions across 3 concept areas
 
-Questions are organized by reusable concepts within each role track, so each question has one canonical home and future contributions have a clear place. Open a card in any file to reveal the answer guidance and evaluator notes.
+---
 
-The system-design set is screened against the existing system-design, distributed-systems, and data-and-storage cards. Overlapping prompts are folded into canonical cards: cache hit ratio into `SD-F015`, data-centre failure into `SD-F026`, live schema changes into `SD-F032`, and traffic-management fundamentals into `SD-F044`–`SD-F052`. No duplicate cards were added.
-
-The two system-design question banks are deliberately separate: [System design fundamentals and patterns](engineering/system-design-fundamentals-and-patterns.md) covers reusable patterns, platform primitives, resilience, operations, and interview reasoning; [Applied system design case studies](engineering/applied-system-design-case-studies.md) applies those ideas to SaaS platforms, infrastructure/ML systems, and fraud/risk domains. They are not merged because the first is pattern-oriented and the second is domain-oriented.
-
-## Choose a role track
-
-### Engineering Track
-
-The engineering collection contains 182 questions for senior, staff, and principal engineers.
-
-Every concept file uses compact, collapsible Q&A cards. Open a card to reveal the answer guidance, trade-offs, and code examples; the `Q001`-style serial numbers make it easy to reference a specific prompt during study or discussion.
-
-<table>
-  <thead>
-    <tr>
-      <th align="center"> </th>
-      <th align="left">Concept</th>
-      <th align="center">Questions</th>
-      <th align="left">Coverage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center"><span style="font-size: 1.6em;">◈</span></td>
-      <td><a href="engineering/coding-and-data-structures.md">Coding and data structures</a></td>
-      <td align="center">30</td>
-      <td>Algorithms, data structures, coding fundamentals, and performance</td>
-    </tr>
-    <tr>
-      <td align="center"><span style="font-size: 1.6em;">△</span></td>
-      <td><a href="engineering/applied-system-design-case-studies.md">Applied system design case studies</a></td>
-      <td align="center">30</td>
-      <td>Product/SaaS platforms, infrastructure and ML systems, fraud/risk, and applied architecture decisions</td>
-    </tr>
-    <tr>
-      <td align="center"><span style="font-size: 1.6em;">◇</span></td>
-      <td><a href="engineering/system-design-fundamentals-and-patterns.md">System design fundamentals and patterns</a></td>
-      <td align="center">52</td>
-      <td>Requirements, reusable platform patterns, data flows, resilience, security, traffic management, and interview judgment</td>
-    </tr>
-    <tr>
-      <td align="center"><span style="font-size: 1.6em;">≋</span></td>
-      <td><a href="engineering/distributed-systems-and-reliability.md">Distributed systems and reliability</a></td>
-      <td align="center">20</td>
-      <td>Networking, consistency, failure modes, observability, and scale</td>
-    </tr>
-    <tr>
-      <td align="center"><span style="font-size: 1.6em;">▦</span></td>
-      <td><a href="engineering/data-and-storage.md">Data and storage</a></td>
-      <td align="center">10</td>
-      <td>SQL, schemas, indexing, partitioning, migrations, and analytics</td>
-    </tr>
-    <tr>
-      <td align="center"><span style="font-size: 1.6em;">◌</span></td>
-      <td><a href="engineering/frontend-and-platform-engineering.md">Front-end and platform engineering</a></td>
-      <td align="center">10</td>
-      <td>JavaScript, rendering, design systems, performance, and technical debt</td>
-    </tr>
-    <tr>
-      <td align="center"><span style="font-size: 1.6em;">◉</span></td>
-      <td><a href="engineering/gpu-parallelism-and-hardware.md">GPU, parallelism, and hardware</a></td>
-      <td align="center">20</td>
-      <td>CUDA, GPU systems, memory, hardware/software boundaries, and digital logic</td>
-    </tr>
-    <tr>
-      <td align="center"><span style="font-size: 1.6em;">✦</span></td>
-      <td><a href="engineering/technical-leadership-and-behavioral.md">Technical leadership and behavioral</a></td>
-      <td align="center">10</td>
-      <td>Influence, mentoring, judgment, communication, and principal-level scope</td>
-    </tr>
-  </tbody>
-</table>
-
-#### In-depth system design solutions
-
-The separate [`engineering/in-depth-system-design-solutions/`](engineering/in-depth-system-design-solutions/) division contains one Markdown chapter per system. Each guide is a senior/staff/principal-level walkthrough with explicit assumptions, requirements, architecture, APIs, data models, correctness, failure handling, security, observability, scaling, trade-offs, and interviewer follow-ups.
-
-<table>
-  <thead>
-    <tr>
-      <th align="center"> </th>
-      <th align="left">Solution guide</th>
-      <th align="center">Guides</th>
-      <th align="left">Coverage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td align="center">01</td><td><a href="engineering/in-depth-system-design-solutions/design-twitter.md">Design Twitter</a></td><td align="center">1</td><td>Social graph, posts, hybrid timeline fan-out, ranking, and moderation</td></tr>
-    <tr><td align="center">02</td><td><a href="engineering/in-depth-system-design-solutions/design-aarogya-setu.md">Design Aarogya Setu</a></td><td align="center">1</td><td>Consent, privacy-preserving exposure notification, epidemiology, and regional resilience</td></tr>
-    <tr><td align="center">03</td><td><a href="engineering/in-depth-system-design-solutions/design-load-balancer.md">Design a load balancer</a></td><td align="center">1</td><td>L4/L7 forwarding, health, draining, configuration, and failover</td></tr>
-    <tr><td align="center">04</td><td><a href="engineering/in-depth-system-design-solutions/design-url-shortener.md">Design a URL shortener</a></td><td align="center">1</td><td>Short-code generation, redirects, aliases, analytics, and abuse controls</td></tr>
-    <tr><td align="center">05</td><td><a href="engineering/in-depth-system-design-solutions/design-logging-system.md">Design a logging system</a></td><td align="center">1</td><td>Durable ingestion, indexing, retention, query isolation, and audit integrity</td></tr>
-    <tr><td align="center">06</td><td><a href="engineering/in-depth-system-design-solutions/design-google-play-store.md">Design Google Play Store</a></td><td align="center">1</td><td>App publishing, scanning, catalog, staged rollout, delivery, and compatibility</td></tr>
-    <tr><td align="center">07</td><td><a href="engineering/in-depth-system-design-solutions/design-zoomcar-app-lld.md">Design Zoom car app LLD</a></td><td align="center">1</td><td>Domain objects, reservation/trip state machines, concurrency, and sagas</td></tr>
-    <tr><td align="center">08</td><td><a href="engineering/in-depth-system-design-solutions/design-e-commerce-platform.md">Design an e-commerce platform</a></td><td align="center">1</td><td>Marketplace boundaries, checkout, inventory reservation, payment, and fulfillment</td></tr>
-    <tr><td align="center">09</td><td><a href="engineering/in-depth-system-design-solutions/design-recommendation-system.md">Design a recommendation system</a></td><td align="center">1</td><td>Offline/online ML, candidate generation, ranking, experimentation, and safety</td></tr>
-    <tr><td align="center">10</td><td><a href="engineering/in-depth-system-design-solutions/design-order-management-system.md">Design an order management system</a></td><td align="center">1</td><td>Order state, fulfillment orchestration, payment/refund correctness, and reconciliation</td></tr>
-    <tr><td align="center">11</td><td><a href="engineering/in-depth-system-design-solutions/design-waste-management-app.md">Design an app for waste management</a></td><td align="center">1</td><td>Municipal scheduling, routing, telemetry, offline sync, and public metrics</td></tr>
-    <tr><td align="center">12</td><td><a href="engineering/in-depth-system-design-solutions/design-library-management-system-lld.md">Design library management system LLD</a></td><td align="center">1</td><td>Catalog/circulation objects, loan and hold states, locking, and testable policies</td></tr>
-    <tr><td align="center">13</td><td><a href="engineering/in-depth-system-design-solutions/design-warehouse-management-system.md">Design a warehouse management system</a></td><td align="center">1</td><td>Receiving, putaway, picking, ledger integrity, task leases, and cycle counts</td></tr>
-    <tr><td align="center">14</td><td><a href="engineering/in-depth-system-design-solutions/design-parking-lot-reservation-system.md">Design a parking-lot reservation system</a></td><td align="center">1</td><td>Capacity holds, interval allocation, gates, payment, and occupancy reconciliation</td></tr>
-    <tr><td align="center">15</td><td><a href="engineering/in-depth-system-design-solutions/design-real-time-inventory-tracking-system.md">Design a real-time inventory tracking system</a></td><td align="center">1</td><td>Event-sourced stock, projections, sequencing, reservations, and drift repair</td></tr>
-    <tr><td align="center">16</td><td><a href="engineering/in-depth-system-design-solutions/design-ecommerce-rating-system.md">Design a rating system for an e-commerce website</a></td><td align="center">1</td><td>Reviews, verified purchase, moderation, aggregation, voting, and fraud controls</td></tr>
-  </tbody>
-</table>
-
-### Technical Program / Project Management Track
-
-The Technical Program / Project Management collection contains 30 questions adapted from the supplied interviewer-preparation set. These are intentionally separate from engineering questions: program and project manager answers should demonstrate technical credibility and delivery judgment without pretending to own implementation-level engineering decisions.
-
-| Concept | Questions | Coverage |
-| --- | ---: | --- |
-| [Technical credibility](technical-program-manager/technical-credibility.md) | 10 | APIs, releases, architecture awareness, data, security, and production readiness |
-| [Programme management](technical-program-manager/programme-management.md) | 10 | Recovery, ambiguity, prioritisation, stakeholders, ownership, and vendors |
-| [Agile and ways of working](technical-program-manager/agile-and-ways-of-working.md) | 10 | Programme setup, ceremonies, speed versus quality, estimation, scaling, and influence |
-
-## How to use it
+## How to use this bank
 
 1. Choose a concept and answer a question aloud before reading the model guidance.
 2. Explain the requirements and constraints before proposing a solution.
-3. Make trade-offs explicit: consistency versus availability, latency versus cost, or speed versus maintainability.
+3. Make trade-offs explicit: consistency vs. availability, latency vs. cost, speed vs. maintainability.
 4. Cover failure modes, observability, rollout, and rollback for design questions.
 5. Replace the model guidance with your own experience, metrics, and examples.
 
 The original interview source—Atlassian, NVIDIA, or Booking.com—is retained inside each concept file as context. The guidance is a scaffold for reasoning, not a script to memorize.
+
+---
+
+## Engineering Track
+
+182 questions for senior, staff, and principal engineers. Every concept file uses compact, collapsible Q&A cards. Open a card to reveal the answer guidance, trade-offs, and code examples; the `Q001`-style serial numbers make it easy to reference a specific question.
+
+| | Concept | Questions | Coverage |
+|---|---|---:|---|
+| ◈ | [Coding and data structures](engineering/coding-and-data-structures.md) | 30 | Algorithms, data structures, coding fundamentals, and performance |
+| △ | [Applied system design case studies](engineering/applied-system-design-case-studies.md) | 30 | Product/SaaS platforms, infrastructure and ML systems, fraud/risk, and applied architecture decisions |
+| ◇ | [System design fundamentals and patterns](engineering/system-design-fundamentals-and-patterns.md) | 52 | Requirements, reusable platform patterns, data flows, resilience, security, traffic management, and interview judgment |
+| ≋ | [Distributed systems and reliability](engineering/distributed-systems-and-reliability.md) | 20 | Networking, consistency, failure modes, observability, and scale |
+| ▦ | [Data and storage](engineering/data-and-storage.md) | 10 | SQL, schemas, indexing, partitioning, migrations, and analytics |
+| ◌ | [Front-end and platform engineering](engineering/frontend-and-platform-engineering.md) | 10 | JavaScript, rendering, design systems, performance, and technical debt |
+| ◉ | [GPU, parallelism, and hardware](engineering/gpu-parallelism-and-hardware.md) | 20 | CUDA, GPU systems, memory, hardware/software boundaries, and digital logic |
+| ✦ | [Technical leadership and behavioral](engineering/technical-leadership-and-behavioral.md) | 10 | Influence, mentoring, judgment, communication, and principal-level scope |
+
+### In-depth system design solutions
+
+The [`engineering/in-depth-system-design-solutions/`](engineering/in-depth-system-design-solutions/) directory contains detailed architecture chapters—one Markdown guide per system. Each guide is a senior/staff/principal-level walkthrough rather than a quick question card, useful for deep-dive preparation or reference.
+
+| | Solution guide | Coverage |
+|---|---|---|
+| 01 | [Design Twitter](engineering/in-depth-system-design-solutions/design-twitter.md) | Social graph, posts, hybrid time, search, and notifications |
+| 02 | [Design Aarogya Setu](engineering/in-depth-system-design-solutions/design-aarogya-setu.md) | Consent, privacy-preserving architecture, and scale-to-millions |
+| 03 | [Design a load balancer](engineering/in-depth-system-design-solutions/design-load-balancer.md) | L4/L7 forwarding, sticky sessions, and health checks |
+| 04 | [Design a URL shortener](engineering/in-depth-system-design-solutions/design-url-shortener.md) | Short-code generation, collision handling, and analytics |
+| 05 | [Design a logging system](engineering/in-depth-system-design-solutions/design-logging-system.md) | Durable ingestion, streaming, storage, and query interfaces |
+| 06 | [Design Google Play Store](engineering/in-depth-system-design-solutions/design-google-play-store.md) | App publishing, delivery, versioning, and rollout strategies |
+| 07 | [Design Zoom car app LLD](engineering/in-depth-system-design-solutions/design-zoomcar-app-lld.md) | Domain objects, state machines, and rental workflows |
+| 08 | [Design an e-commerce platform](engineering/in-depth-system-design-solutions/design-e-commerce-platform.md) | Marketplace, payments, inventory, and fulfillment |
+| 09 | [Design a recommendation system](engineering/in-depth-system-design-solutions/design-recommendation-system.md) | Offline models, online serving, feedback loops, and diversity |
+| 10 | [Design an order management system](engineering/in-depth-system-design-solutions/design-order-management-system.md) | Order lifecycle, state transitions, and vendor integration |
+| 11 | [Design an app for waste management](engineering/in-depth-system-design-solutions/design-waste-management-app.md) | Scheduling, routing, and resource optimization |
+| 12 | [Design library management system LLD](engineering/in-depth-system-design-solutions/design-library-management-system-lld.md) | Inventory, checkouts, and reservations |
+| 13 | [Design a warehouse management system](engineering/in-depth-system-design-solutions/design-warehouse-management-system.md) | Storage, picking, packing, and shipment tracking |
+| 14 | [Design a parking-lot reservation system](engineering/in-depth-system-design-solutions/design-parking-lot-reservation-system.md) | Availability, pricing, and real-time updates |
+| 15 | [Design a real-time inventory tracking system](engineering/in-depth-system-design-solutions/design-real-time-inventory-tracking-system.md) | Event streams, analytics, and alerting |
+| 16 | [Design a rating system for an e-commerce website](engineering/in-depth-system-design-solutions/design-ecommerce-rating-system.md) | Consensus, fraud detection, and display logic |
+
+---
+
+## Technical Program / Project Management Track
+
+30 questions for technical program managers and project leads. Organized by three core competencies, separate from engineering questions because they emphasize delivery, stakeholder judgment, and programme scope.
+
+| Concept | Questions | Coverage |
+|---|---:|---|
+| [Technical credibility](technical-program-manager/technical-credibility.md) | 10 | APIs, releases, architecture awareness, data, security, and production readiness |
+| [Programme management](technical-program-manager/programme-management.md) | 10 | Recovery, ambiguity, prioritisation, stakeholders, ownership, and vendors |
+| [Agile and ways of working](technical-program-manager/agile-and-ways-of-working.md) | 10 | Programme setup, ceremonies, speed vs. quality, estimation, scaling, and influence |
