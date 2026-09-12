@@ -17,7 +17,7 @@ A collection of **212 interview questions** focused on reasoning, trade-offs, an
 Choose your track and jump in:
 
 - **[Engineering Track](#engineering-track)** — 182 questions across 8 concept areas + 16 in-depth solution guides
-- **[Technical Program / Project Management Track](#technical--project-management-track)** — 30 questions across 3 concept areas
+- **[Technical Program / Project Management Track](#technical-program--project-management-track)** — 30 questions across 3 concept areas
 
 ---
 
